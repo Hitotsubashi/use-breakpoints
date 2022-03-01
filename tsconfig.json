@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [ "ESNext","DOM" ],
-    "module":"ESNext",
+    "lib": ["ESNext", "DOM"],
+    "module": "ESNext",
     "moduleResolution": "node",
     "jsx": "react",
     "esModuleInterop": true,
@@ -11,10 +11,12 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "baseUrl":".",
+    "baseUrl": ".",
     "outDir": "lib",
     "declaration": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "skipLibCheck": true
   },
-  "exclude": ["node_modules", "lib","demo", "**/__tests__", "**/__test__"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "lib", "example", "**/__tests__", "**/__test__"]
 }

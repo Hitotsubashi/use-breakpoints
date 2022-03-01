@@ -5,7 +5,7 @@ interface BreakpointProviderProps {
     breakpointMediaQuery?: BreakpointMediaQuery;
     children?: React.ReactNode;
 }
-declare function BreakpointProvider({ breakpointMediaQuery, children }: BreakpointProviderProps): any;
+declare function BreakpointProvider({ breakpointMediaQuery, children }: BreakpointProviderProps): JSX.Element;
 declare function useDefaultBreakpoint(): BreakpointValue;
 export { useDefaultBreakpoint, BreakpointProvider };
 export default useBreakpoint;

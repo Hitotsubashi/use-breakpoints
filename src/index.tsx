@@ -1,9 +1,17 @@
-import React,{ createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
 import type { BreakpointMediaQuery, BreakpointValue } from './BreakpointObserver';
 import BreakpointObserver from './BreakpointObserver';
+import equal from 'fast-deep-equal';
 
 function useBreakpoint(breakpointMediaQuery: BreakpointMediaQuery): BreakpointValue {
   const [breakpointMap, setBreakpointMap] = useState<BreakpointValue>({});
+  const preBreakpointMediaQuery = useRef<BreakpointMediaQuery>();
+  const effectSignal = useRef<number>(0);
+
+  if (!equal(preBreakpointMediaQuery.current, breakpointMediaQuery)) {
+    preBreakpointMediaQuery.current = breakpointMediaQuery;
+    effectSignal.current += 1;
+  }
 
   useEffect(() => {
     const token = BreakpointObserver.subscribe(breakpointMediaQuery, (value) => {
@@ -11,7 +19,8 @@ function useBreakpoint(breakpointMediaQuery: BreakpointMediaQuery): BreakpointVa
     });
 
     return () => BreakpointObserver.unsubscribe(token);
-  }, [breakpointMediaQuery]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [effectSignal.current]);
 
   return breakpointMap;
 }
