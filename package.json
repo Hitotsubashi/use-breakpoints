@@ -8,6 +8,9 @@
     "type": "git",
     "url": "git+https://github.com/Hitotsubashi/use-breakpoints"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "keywords": [
     "breakpoint",
     "rc-hook",
