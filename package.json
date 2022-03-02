@@ -3,6 +3,17 @@
   "version": "1.0.0",
   "main": "lib/index.js",
   "license": "MIT",
+  "author": "hitotsubashi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hitotsubashi/use-breakpoints"
+  },
+  "keywords": [
+    "breakpoint",
+    "rc-hook",
+    "media",
+    "css"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch"
