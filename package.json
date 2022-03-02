@@ -15,6 +15,7 @@
     "README"
   ],
   "devDependencies": {
+    "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/jest": "^27.4.1",
     "@types/react": "^17.0.39",
@@ -26,8 +27,8 @@
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "ts-jest": "^27.1.3",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^5.0.0",
+    "ts-jest": "^27.1.3"
   },
   "peerDependencies": {
     "react": ">=16.9.0",
