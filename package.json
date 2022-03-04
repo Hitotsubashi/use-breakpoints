@@ -1,12 +1,22 @@
 {
-  "name": "@bottle/use-breakpoints",
-  "version": "1.0.0",
+  "name": "use-media-breakpoint",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "license": "MIT",
   "author": "hitotsubashi",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hitotsubashi/use-breakpoints"
+    "url": "git+https://github.com/Hitotsubashi/use-breakpoints.git"
+  },
+  "types": "./lib/index.d.ts",
+  "description": "just see example",
+  "bugs": {
+    "url": "https://github.com/Hitotsubashi/use-breakpoints/issues"
+  },
+  "homepage": "https://github.com/Hitotsubashi/use-breakpoints#readme",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
